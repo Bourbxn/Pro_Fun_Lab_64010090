@@ -9,7 +9,7 @@ int main(){
       for(int j=1;j<=num;j++){
         if(j==1 || j==num)printf("*");
         else if((i==1 || i==num) && (j!=1 || j!=num))printf("*");
-        else if((i!=0 || i!=num) && (j!=1 || j!=num))printf(" ");
+        else if((i!=1 || i!=num) && (j!=1 || j!=num))printf(" ");
       }
       printf("\n");
     }
