@@ -13,7 +13,7 @@ int main(){
       }
       for(int k=0;k<check-1;k++)pow10*=10;
       for(int k=j;k<j+check;k++){
-        times+=(sentc[k]-48)*pow10;     //Bug sentc[j] >> sentc[k]
+        times+=(sentc[k]-48)*pow10;
         pow10/=10;
       }
       for(int k=0;k<times;k++)printf("%c", sentc[j+check]);
