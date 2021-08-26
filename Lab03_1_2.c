@@ -2,6 +2,7 @@
 int main(){
   int num,sum;
   scanf("%d", &num);
+  printf("%d", num);
   while(num/10!=0){
     sum=0;
     while(num!=0){
@@ -9,7 +10,7 @@ int main(){
       num/=10;
     }
     num=sum;
+    printf(" -> %d", sum);
   }
-  printf("%d", sum);
   return 0;
 }
