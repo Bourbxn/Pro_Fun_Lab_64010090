@@ -6,7 +6,7 @@ int main(){
   while(sentc[++i]!='\0');
   for(int j=0;j<i;j++){
     if(sentc[j]>=48 && sentc[j]<=57){
-      if(sentc[j+1]<48 || sentc[j+1]>57){     //Bug && >> ||
+      if(sentc[j+1]<48 && sentc[j+1]>57){     //Bug && >> ||
         int times=sentc[j]-48;
         for(int k=0;k<times;k++)printf("%c", sentc[j+1]);
         j++;
@@ -19,7 +19,7 @@ int main(){
         }
         for(int k=0;k<check-1;k++)pow10*=10;
         for(int k=j;k<j+check;k++){
-          times+=(sentc[k]-48)*pow10;     //Bug sentc[j] >> sentc[k]
+          times+=(sentc[j]-48)*pow10;     //Bug sentc[j] >> sentc[k]
           pow10/=10;
         }
         for(int k=0;k<times;k++)printf("%c", sentc[j+check]);
@@ -30,4 +30,5 @@ int main(){
       printf("%c", sentc[j]);
     }
   }
+  return 0;
 }
