@@ -2,13 +2,14 @@
 #include "windows.h"
 #include "conio.h"
 
-void setcursor(bool visible) //no boolean in atom ide can use int instead
+void setcursor(boolean visible)
 {
 	HANDLE console = GetStdHandle(STD_OUTPUT_HANDLE);
 	CONSOLE_CURSOR_INFO lpCursor;
 	lpCursor.bVisible = visible;
 	lpCursor.dwSize = 20;
 	SetConsoleCursorInfo(console, &lpCursor);
+}
 
 void gotoxy(int x, int y)
 {
